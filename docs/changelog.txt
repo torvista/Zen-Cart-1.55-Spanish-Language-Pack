@@ -1,5 +1,8 @@
 Changelog
 
+2016 02 22 replacement of comment headers to point to Github. Renaming of Github to 1.5x.
+BUGFIX: removal of quotes from constants in advanced_search/advanced_search_results that were causing javascript errors.
+
 2016 10 19 moved from Sourceforge to Gitub
 
 1.5.5a.02

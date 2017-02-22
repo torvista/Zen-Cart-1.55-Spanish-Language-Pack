@@ -1,4 +1,4 @@
-<?php //Spanish Language Pack for Zen Cart 1.5: http://zencartspanish.svn.sourceforge.net/viewvc/zencartspanish/
+<?php //Spanish Language Pack for Zen Cart 1.5x: https://github.com/torvista/Zen-Cart-1.5x-Spanish-Language-Pack
 /**
  * @package languageDefines
  * @copyright Copyright 2003-2006 Zen Cart Development Team
@@ -43,12 +43,11 @@ define('ENTRY_DATE_RANGE', 'Buscar por Fecha de Entrada en catálogo:');
   define('TEXT_NO_PRODUCTS', 'No hay productos que coincidan con su criterio de búsqueda.');
   define('KEYWORD_FORMAT_STRING', 'palabras claves');
   define('ERROR_AT_LEAST_ONE_INPUT', 'Debe rellenar al menos uno de los campos.');
-  define('ERROR_INVALID_FROM_DATE', '"Fecha desde" no válida.');
-  define('ERROR_INVALID_TO_DATE', '"Fecha hasta" no válida.');
-  define('ERROR_TO_DATE_LESS_THAN_FROM_DATE', 'La "Fecha hasta" debe ser mayor o igual a la "Fecha desde".');
-  define('ERROR_PRICE_FROM_MUST_BE_NUM', 'El "Precio desde" debe ser un número.');
-  define('ERROR_PRICE_TO_MUST_BE_NUM', 'El "Precio hasta" debe ser un número.');
-  define('ERROR_PRICE_TO_LESS_THAN_PRICE_FROM', 'El "Precio hasta" debe ser mayor o igual al "Precio desde".');
+  define('ERROR_INVALID_FROM_DATE', ENTRY_DATE_FROM . ' no válida.');
+  define('ERROR_INVALID_TO_DATE', ENTRY_DATE_TO . ' no válida.');
+  define('ERROR_TO_DATE_LESS_THAN_FROM_DATE', 'La ' . ENTRY_DATE_TO . ' debe ser mayor o igual a la ' . ENTRY_DATE_FROM);
+  define('ERROR_PRICE_FROM_MUST_BE_NUM', 'El ' . ENTRY_PRICE_FROM . ' debe ser un número.'); 
+  define('ERROR_PRICE_TO_MUST_BE_NUM', 'El '. ENTRY_PRICE_TO. ' debe ser un número.');
+  define('ERROR_PRICE_TO_LESS_THAN_PRICE_FROM', 'El ' . ENTRY_PRICE_TO . ' debe ser mayor o igual al ' . ENTRY_PRICE_FROM);
   define('ERROR_INVALID_KEYWORDS', 'Palabras no válidas.');
-
 ?>
