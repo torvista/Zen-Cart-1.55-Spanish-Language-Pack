@@ -446,6 +446,7 @@ define('ERROR_DESTINATION_DOES_NOT_EXIST', 'Error: El destino no existe %s');
 define('ERROR_DESTINATION_NOT_WRITEABLE', 'Error: El destino no puede escribirse %s');
 define('ERROR_FILE_NOT_SAVED', 'Error: El fichero subido no se guardó.');
 define('ERROR_FILETYPE_NOT_ALLOWED', 'Error: El tipo de fichero subido no está permitido %s');
+define('ERROR_FILE_TOO_BIG', 'Advertencia: El tamaño del archivo es mayor que el permitido. Ver Configuración-Imágenes.');
 define('SUCCESS_FILE_SAVED_SUCCESSFULLY', 'Listo: El fichero subido se guardó correctamente %s');
 define('WARNING_NO_FILE_UPLOADED', 'Advertencia: No se subió el fichero.');
 define('WARNING_FILE_UPLOADS_DISABLED', 'Advertencia: Subir ficheros está deshabilitado en el fichero de configuración php.ini.');
