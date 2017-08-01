@@ -286,7 +286,7 @@
   define('TEXT_REVIEW_WORD_COUNT', '%s palabras');
   define('TEXT_REVIEW_RATING', 'Valoración: %s [%s]');
   define('TEXT_REVIEW_DATE_ADDED', 'Fecha añadida: %s');
-  define('TEXT_NO_REVIEWS', 'No hay comentarios de productos.');
+  define('TEXT_NO_REVIEWS', 'No hay comentarios.');
 
   define('TEXT_NO_NEW_PRODUCTS', 'Nuevos productos estarán muy pronto disponibles. Por favor, visítenos de nuevo.');
 
