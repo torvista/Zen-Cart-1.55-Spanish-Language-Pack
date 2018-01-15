@@ -9,10 +9,10 @@
 
 define('HEADING_TITLE', 'Comentarios');
 
-define('TABLE_HEADING_PRODUCTS', 'Productos');
+define('TABLE_HEADING_PRODUCTS', 'Producto');
 define('TABLE_HEADING_CUSTOMER_NAME','Cliente');
 define('TABLE_HEADING_RATING', 'Puntuación');
-define('TABLE_HEADING_DATE_ADDED', 'Añadido el');
+define('TABLE_HEADING_DATE_ADDED', 'Escrito');
 define('TABLE_HEADING_STATUS', 'Estado');
 define('TABLE_HEADING_ACTION', 'Acción');
 

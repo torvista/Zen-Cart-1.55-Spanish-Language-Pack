@@ -1,10 +1,10 @@
 <?php //Spanish Language Pack for Zen Cart 1.5x: https://github.com/torvista/Zen-Cart-1.5x-Spanish-Language-Pack
 /**
  * @package languageDefines
- * @copyright Copyright 2003-2016 Zen Cart Development Team
+ * @copyright Copyright 2003-2017 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: Author: DrByte  Fri Sep 11 16:00:40 2015 -0400 Modified in v1.5.5 $
+ * @version $Id: Author: DrByte  Modified in v1.5.5 $
  */
 
 define('NAVBAR_TITLE_1', 'Comprar - Paso 1');
@@ -29,7 +29,7 @@ define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', '<strong>Continuar al paso 3</strong
 define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', '- confirmar su pedido.');
 
 define('TABLE_HEADING_CONDITIONS', '<span class="termsconditions">Términos y Condiciones</span>');
-define('TEXT_CONDITIONS_DESCRIPTION', '<span class="termsdescription">Por favor, acepte los términos y condiciones ligados a este pedido marcando la casilla. Puede leer los términos y condiciones <a href="' . zen_href_link(FILENAME_CONDITIONS, '', 'SSL') . '" target="_blank"><span class="pseudolink">aquí</span></a>.</span>');//https://github.com/zencart/zencart/issues/1452
+define('TEXT_CONDITIONS_DESCRIPTION', '<span class="termsdescription">Por favor, acepte los términos y condiciones ligados a este pedido marcando la casilla. Puede leer los términos y condiciones <a href="' . zen_href_link(FILENAME_CONDITIONS, '', 'SSL') . '" target="_blank"><span class="pseudolink">aquí</span></a>.</span>');
 define('TEXT_CONDITIONS_CONFIRM', '<span class="termsiagree">He leído y acepto los términos y condiciones ligados a este pedido.</span>');
 
 define('TEXT_CHECKOUT_AMOUNT_DUE', 'Cantidad total a pagar: ');

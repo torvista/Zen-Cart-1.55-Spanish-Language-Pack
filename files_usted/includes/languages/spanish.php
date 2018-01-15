@@ -1,5 +1,5 @@
 <?php //Spanish Language Pack for Zen Cart 1.5x: https://github.com/torvista/Zen-Cart-1.5x-Spanish-Language-Pack
-/**
+/**includes changes for Date of Birth format dd/mm/yy, currency euro, kg weight
  * @package languageDefines
  * @copyright Copyright 2003-2016 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
@@ -8,7 +8,7 @@
  */
 
 // FOLLOWING WERE moved to meta_tags.php
-//define('TITLE', '¡Zen Cart!');
+//define('TITLE', 'Zen Cart!');
 //define('SITE_TAGLINE', 'The Art of E-commerce');
 //define('CUSTOM_KEYWORDS', 'ecommerce, open source, shop, online shopping');
 // END: moved to meta_tags.php
@@ -18,9 +18,9 @@
 // look in your $PATH_LOCALE/locale directory for available locales..
   $locales = array('es_ES.UTF8', 'es-ES', 'Spanish_Spain.1252', 'es');
   @setlocale(LC_TIME, $locales);
-  define('DATE_FORMAT_SHORT', '%m/%d/%Y');  // this is used for strftime()
+  define('DATE_FORMAT_SHORT', '%d/%m/%Y'); // this is used for strftime()
   define('DATE_FORMAT_LONG', '%A %d %B, %Y'); // this is used for strftime()
-  define('DATE_FORMAT', 'm/d/Y'); // this is used for date()
+  define('DATE_FORMAT', 'd/m/Y'); // this is used for date()
   define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' %H:%M:%S');
 
 ////
@@ -30,18 +30,18 @@
   if (!function_exists('zen_date_raw')) {
     function zen_date_raw($date, $reverse = false) {
       if ($reverse) {
-        return substr($date, 3, 2) . substr($date, 0, 2) . substr($date, 6, 4);
+        return substr($date, 0, 2) . substr($date, 3, 2) . substr($date, 6, 4);
       } else {
-        return substr($date, 6, 4) . substr($date, 0, 2) . substr($date, 3, 2);
+        return substr($date, 6, 4) . substr($date, 3, 2) . substr($date, 0, 2);
       }
     }
   }
 
 // if USE_DEFAULT_LANGUAGE_CURRENCY is true, use the following currency, instead of the applications default currency (used when changing language)
-  define('LANGUAGE_CURRENCY', 'USD');
+  define('LANGUAGE_CURRENCY', 'EUR');
 
 // Global entries for the <html> tag
-  define('HTML_PARAMS', 'dir="ltr" lang="es"');
+  define('HTML_PARAMS', 'dir="ltr" lang="es-ES"');
 
 // charset for web pages and emails
   define('CHARSET', 'utf-8');
@@ -67,7 +67,7 @@
   define('FEMALE_ADDRESS', 'Sra.');
 
 // text for date of birth example
-  define('DOB_FORMAT_STRING', 'mm/dd/yyyy');
+define('DOB_FORMAT_STRING', 'dd/mm/yyyy'); 
 
 //text for sidebox heading links
   define('BOX_HEADING_LINKS', '&nbsp;&nbsp;[todos]');
@@ -189,8 +189,8 @@
   define('ENTRY_LAST_NAME_ERROR', 'Cada apellido debe tener un mínimo de ' . ENTRY_LAST_NAME_MIN_LENGTH . ' caracteres.');
   define('ENTRY_LAST_NAME_TEXT', '*');
   define('ENTRY_DATE_OF_BIRTH', 'Fecha de nacimiento:');
-  define('ENTRY_DATE_OF_BIRTH_ERROR', 'La fecha de nacimiento debe tener este formato: MM/DD/YYYY (ej. 05/21/1970)');
-  define('ENTRY_DATE_OF_BIRTH_TEXT', '(ej. 05/21/1970)');
+  define('ENTRY_DATE_OF_BIRTH_ERROR', 'La fecha de nacimiento debe tener este formato: DD/MM/YYYY (ej. 21/05/1970)');
+  define('ENTRY_DATE_OF_BIRTH_TEXT', '(ej. 21/05/1970)');
   define('ENTRY_EMAIL_ADDRESS', 'E-mail:');
   define('ENTRY_EMAIL_ADDRESS_ERROR', 'El e-mail debe tener un mínimo de ' . ENTRY_EMAIL_ADDRESS_MIN_LENGTH . ' caracteres.');
   define('ENTRY_EMAIL_ADDRESS_CHECK_ERROR', 'Este e-mail parece no ser válido - por favor, realice las correcciones necesarias.');
@@ -203,7 +203,7 @@
   define('ENTRY_STREET_ADDRESS', 'Dirección:');
   define('ENTRY_STREET_ADDRESS_ERROR', 'La dirección debe tener un mínimo de  ' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' caracteres.');
   define('ENTRY_STREET_ADDRESS_TEXT', '*');
-  define('ENTRY_SUBURB', 'Dirección Línea 2:');
+  define('ENTRY_SUBURB', 'Dirección (cont.):');
   define('ENTRY_SUBURB_ERROR', '');
   define('ENTRY_SUBURB_TEXT', '');
   define('ENTRY_POST_CODE', 'Código postal:');
@@ -350,7 +350,7 @@
   define('REDEEMED_RESTRICTIONS', ' [se aplican restricciones Producto-Categoría]');
   define('TEXT_ERROR', 'Ha ocurrido un error');
   define('TEXT_INVALID_COUPON_PRODUCT', 'El código del cupón no es válido para ningún producto de los que están en su carro');
-  define('TEXT_VALID_COUPON', 'Felicidades, ha cajeado el cupón de descuento');
+  define('TEXT_VALID_COUPON', '¡Ha añadido un Cupón de Descuento a su pedido!');
   define('TEXT_REMOVE_REDEEM_COUPON_ZONE', 'El código de cupón no es válido para la dirección elegida.');
 
 // more info in place of buy now
@@ -373,10 +373,10 @@
 // only for where multiple add to cart is used:
   define('SUCCESS_ADDED_TO_CART_PRODUCTS', 'El producto(s) seleccionado ha sido añadido al carro ...');
 
-  define('TEXT_PRODUCT_WEIGHT_UNIT','lbs');
+  define('TEXT_PRODUCT_WEIGHT_UNIT',' kg');
 
 // Shipping
-  define('TEXT_SHIPPING_WEIGHT','lbs');
+  define('TEXT_SHIPPING_WEIGHT',' kg');
   define('TEXT_SHIPPING_BOXES', 'Cajas');
 
 // Discount Savings
@@ -385,7 +385,7 @@
   define('PRODUCT_PRICE_DISCOUNT_AMOUNT', '&nbsp;descuento');
 
 // Sale Maker Sale Price
-  define('PRODUCT_PRICE_SALE', 'Venta:&nbsp;');
+  define('PRODUCT_PRICE_SALE', 'Oferta:&nbsp;');
 
 //universal symbols
   define('TEXT_NUMBER_SYMBOL', '# ');
@@ -431,7 +431,7 @@
 
   define('PRODUCTS_PRICE_IS_FREE_TEXT', '¡Es gratis!');
   define('PRODUCTS_PRICE_IS_CALL_FOR_PRICE_TEXT', 'Llame para saber el precio');
-  define('TEXT_CALL_FOR_PRICE', 'Llame para saber el precio');
+  define('TEXT_CALL_FOR_PRICE', 'Contáctenos para saber el precio');
 
   define('TEXT_INVALID_SELECTION',' Elijó una Opción Inválida: ');
   define('TEXT_ERROR_OPTION_FOR', ' En la Opción para: ');

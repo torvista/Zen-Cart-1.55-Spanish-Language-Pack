@@ -43,7 +43,7 @@ define('TEXT_ALL_CATEGORIES', 'Todas las categorías');
 define('TEXT_ALL_MANUFACTURERS', 'Todos los fabricantes');
 
 define('HEADING_SEARCH_HELP', 'Ayuda de la Búsqueda');
-define('TEXT_SEARCH_HELP', 'Las palabras pueden estar separadas por los operadores AND (Y) y/o OR (O) para un mejor control de los resultados de la búsqueda.<br /><br />Por ejemplo, Microsoft AND ratón generaría un lista de resultados conteniendo ambas palabras. Así, para ratón OR teclado, la lista de resultados contendría ambas o alguna de las palabras.<br /><br />Coincidencias exactas pueden buscarse encerrando las palabras en comillas dobles.<br /><br />Por ejemplo, "computadoras portátiles" generaría una lista de resultados coincidiendo con la frase exacta.<br /><br />Los paréntesis pueden usarse para un control más avanzado de los resultados.<br /><br />Por ejemplo, Microsoft and (teclado or ratón or "visual basic").');
+define('TEXT_SEARCH_HELP', 'Las palabras pueden estar separadas por los operadores AND (Y) y/o OR (O) para un mejor control de los resultados de la búsqueda.<br /><br />Por ejemplo, Microsoft AND ratón generaría un lista de resultados conteniendo ambas palabras. Así, para ratón OR teclado, la lista de resultados contendría ambas o alguna de las palabras.<br /><br />Coincidencias exactas pueden buscarse encerrando las palabras en comillas dobles.<br /><br />Por ejemplo, \"computadoras portátiles\" generaría una lista de resultados coincidiendo con la frase exacta.<br /><br />Los paréntesis pueden usarse para un control más avanzado de los resultados.<br /><br />Por ejemplo, Microsoft AND (teclado OR ratón OR "visual basic").');//escape quotation marks
 define('TEXT_CLOSE_WINDOW', 'Cerrar ventana [x]');
 
 define('TABLE_HEADING_IMAGE', '');

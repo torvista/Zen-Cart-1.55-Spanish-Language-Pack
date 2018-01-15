@@ -46,7 +46,7 @@ define('TEXT_INFO_HEADING_EDIT_BOX', 'Editar Cuadro');
 define('TEXT_INFO_HEADING_DELETE_BOX', 'Eliminar Cuadro');
 define('TEXT_INFO_DELETE_MISSING_LAYOUT_BOX','Eliminar cuadro faltante del listado de esta plantilla: ');
 define('TEXT_INFO_DELETE_MISSING_LAYOUT_BOX_NOTE','NOTA: Esto no elimina ficheros así que puede volver a añadir el cuadro en cualquier momento sólo añadiendolo al directorio correcto.<br /><br /><strong>Eliminar nombre de cuadro: </strong>');
-define('TEXT_INFO_RESET_TEMPLATE_SORT_ORDER','Restablecer la configuración de los cuadros a la por DEFECTO para Plantilla: ');
+define('TEXT_INFO_RESET_TEMPLATE_SORT_ORDER','Restablecer la configuración de los cuadros de la plantilla actual a la por DEFECTO');
 define('TEXT_INFO_RESET_TEMPLATE_SORT_ORDER_NOTE','Esto no elimina ninguno de los cuadros. Sólo restablecerá el orden por defecto');
 define('TEXT_INFO_BOX_DETAILS','Detalles de Recuadro: ');
 

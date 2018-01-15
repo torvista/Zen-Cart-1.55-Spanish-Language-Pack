@@ -1,5 +1,5 @@
 <?php //Spanish Language Pack for Zen Cart 1.5x: https://github.com/torvista/Zen-Cart-1.5x-Spanish-Language-Pack
-/**
+/**con cambios para mostrar la fecha de nacimiento en el formato dd/mm/aaaa.
  * @package admin
  * @copyright Copyright 2003-2016 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
@@ -20,12 +20,12 @@ define('HEADER_LOGO_IMAGE', 'logo.gif');
 // look in your $PATH_LOCALE/locale directory for available locales..
 $locales = array('es_ES.UTF8', 'es-ES', 'Spanish_Spain.1252', 'es');
 @setlocale(LC_TIME, $locales);
-define('DATE_FORMAT_SHORT', '%m/%d/%Y');  // this is used for strftime()
+define('DATE_FORMAT_SHORT', '%d/%m/%Y'); // this is used for strftime()
 define('DATE_FORMAT_LONG', '%A %d %B, %Y'); // this is used for strftime()
-define('DATE_FORMAT', 'm/d/Y'); // this is used for date()
-define('PHP_DATE_TIME_FORMAT', 'm/d/Y H:i:s'); // this is used for date()
+define('DATE_FORMAT', 'd/m/Y'); // this is used for date()
+define('PHP_DATE_TIME_FORMAT', 'd/m/Y H:i:s'); // this is used for date()
 define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' %H:%M:%S');
-define('DATE_FORMAT_SPIFFYCAL', 'MM/dd/yyyy');  //Use only 'dd', 'MM' and 'yyyy' here in any order
+define('DATE_FORMAT_SPIFFYCAL', 'dd/MM/yyyy'); //Use only 'dd', 'MM' and 'yyyy' here in any order 
 define('ADMIN_NAV_DATE_TIME_FORMAT', '%A %d %b %Y %X'); // this is used for strftime()
 ////
 // Return date in raw format
@@ -33,9 +33,9 @@ define('ADMIN_NAV_DATE_TIME_FORMAT', '%A %d %b %Y %X'); // this is used for strf
 // raw date is in format YYYYMMDD, or DDMMYYYY
 function zen_date_raw($date, $reverse = false) {
   if ($reverse) {
-    return substr($date, 3, 2) . substr($date, 0, 2) . substr($date, 6, 4);
+return substr($date, 0, 2) . substr($date, 3, 2) . substr($date, 6, 4);
   } else {
-    return substr($date, 6, 4) . substr($date, 0, 2) . substr($date, 3, 2);
+return substr($date, 6, 4) . substr($date, 3, 2) . substr($date, 0, 2);
   }
 }
 
@@ -238,7 +238,7 @@ define('JS_SPECIALS_PRODUCTS_PRICE', '* Se necesita establecer un nuevo precio p
 define('JS_GENDER', '* Se debe elegir el \'Sexo\'.\n');
 define('JS_FIRST_NAME', '* El \'Nombre\' debe tener al menos ' . ENTRY_FIRST_NAME_MIN_LENGTH . ' caracteres.\n');
 define('JS_LAST_NAME', '* El \'Apellido\' debe tener al menos ' . ENTRY_LAST_NAME_MIN_LENGTH . ' caracteres.\n');
-define('JS_DOB', '* La \'Fecha de Nacimiento\' debe estar en el formato: xx/xx/xxxx (mes/día/año).\n');
+define('JS_DOB', '* La \'Fecha de Nacimiento\' debe estar en el formato: xx/xx/xxxx (día/mes/año).\n');
 define('JS_EMAIL_ADDRESS', '* El \'E-Mail\' debe tener al menos ' . ENTRY_EMAIL_ADDRESS_MIN_LENGTH . ' caracteres.\n');
 define('JS_ADDRESS', '* La \'Dirección\' debe tener al menos ' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' caracteres.\n');
 define('JS_POST_CODE', '* El \'Código Postal\' debe tener al menos ' . ENTRY_POSTCODE_MIN_LENGTH . ' caracteres.\n');
@@ -265,7 +265,7 @@ define('ENTRY_FIRST_NAME_ERROR', '&nbsp;<span class="errorText">min ' . ENTRY_FI
 define('ENTRY_LAST_NAME', 'Apellidos:');
 define('ENTRY_LAST_NAME_ERROR', '&nbsp;<span class="errorText">min ' . ENTRY_LAST_NAME_MIN_LENGTH . ' letras</span>');
 define('ENTRY_DATE_OF_BIRTH', 'Fecha de Nacimiento:');
-define('ENTRY_DATE_OF_BIRTH_ERROR', '&nbsp;<span class="errorText">(ej. 05/21/1970)</span>');
+define('ENTRY_DATE_OF_BIRTH_ERROR', '&nbsp;<span class="errorText">(ej. 21/05/1970)</span>');
 define('ENTRY_EMAIL_ADDRESS', 'Email:');
 define('ENTRY_EMAIL_ADDRESS_ERROR', '&nbsp;<span class="errorText">min ' . ENTRY_EMAIL_ADDRESS_MIN_LENGTH . ' letras</span>');
 define('ENTRY_EMAIL_ADDRESS_CHECK_ERROR', '&nbsp;<span class="errorText">¡El email parece no ser válido!</span>');
@@ -570,6 +570,7 @@ define('NOT_INSTALLED_TEXT', 'No Instalado');
   define('TEXT_VERSION_CHECK_PATCH', 'parche');
   define('TEXT_VERSION_CHECK_DOWNLOAD', 'Descargar aquí');
   define('TEXT_VERSION_CHECK_CURRENT',' Su versión de Zen Cart&reg; parece ser la más actual.');
+  define('ERROR_CONTACTING_PROJECT_VERSION_SERVER','Error: No pudo contactar con el Project Version Server');
 
 // downloads manager
 define('TEXT_DISPLAY_NUMBER_OF_PRODUCTS_DOWNLOADS_MANAGER', 'Mostrando del <b>%d</b> a <b>%d</b> (de <b>%d</b> descargas)');
@@ -623,7 +624,7 @@ define('TEXT_INFO_SET_MASTER_CATEGORIES_ID_WARNING', '<strong>ATENCIÓN:</strong
 define('PRODUCTS_PRICE_IS_CALL_FOR_PRICE_TEXT', 'El producto es Pedir Precio');
 define('PRODUCTS_PRICE_IS_FREE_TEXT', 'El producto es gratis');
 
-define('TEXT_PRODUCT_WEIGHT_UNIT','lbs');
+define('TEXT_PRODUCT_WEIGHT_UNIT','kg');
 
 // min, max, units
 define('PRODUCTS_QUANTITY_MAX_TEXT_LISTING', 'Max:');
@@ -735,7 +736,7 @@ define('WARNING_ADMIN_FOLDERNAME_VULNERABLE', 'AVISO: <a href="http://tutorials.
 define('WARNING_EMAIL_SYSTEM_DISABLED', 'AVISO: El envío de los emails está deshabilitado. Puede habilitarlo en Admin->Configuración->Opciones de Email.');
 define('TEXT_CURRENT_VER_IS', 'Actualmente esta utilizando: ');
 define('ERROR_NO_DATA_TO_SAVE', 'ERROR: Datos vacios. SUS CAMBIOS *NO* HAN SIDO GUARDADOS. Posiblemente hay un problema con su navegador o su conexión a internet.');
-define('TEXT_HIDDEN', 'Invisible al cliente');
+define('TEXT_HIDDEN', 'Oculto del cliente');
 define('TEXT_VISIBLE', 'Visible al cliente');
 define('TEXT_HIDE', 'Ocultar');
 define('TEXT_EMAIL', 'Email');

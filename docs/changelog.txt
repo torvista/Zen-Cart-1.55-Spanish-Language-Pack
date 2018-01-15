@@ -1,7 +1,9 @@
 Changelog
 
+2018 01 15 Minor changes for Zen Cart 1.55f
+Since this is a pack for Spain: changed default date format to dd/mm/yyyy and changed default weight to kg.
 2017 05 07 checkout_payment missing a closing span: https://github.com/zencart/zencart/issues/1452
-2017 09 03 admin - spanish.php new defined for zc1.55e
+2017 09 03 admin - spanish.php new defines for zc1.55e
 2017 02 22 replacement of comment headers to point to Github. Renaming of Github to 1.5x.
 BUGFIX: removal of quotes from constants in advanced_search/advanced_search_results that were causing javascript errors.
 2016 10 19 moved from Sourceforge to Github
