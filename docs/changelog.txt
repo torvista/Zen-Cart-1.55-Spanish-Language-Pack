@@ -1,7 +1,9 @@
 Changelog
 
-2018 09 12 uploaded to Zen Cart plugins as v1.55f-1
+2019 03 27 revised all files for Zen Cart 1.56a and uploaded to Github.
 
+Zen Cart 1.56
+-------------
 2018 01 15 Minor changes for Zen Cart 1.55f
 Since this is a pack for Spain: changed default date format to dd/mm/yyyy and changed default weight to kg.
 2017 05 07 checkout_payment missing a closing span: https://github.com/zencart/zencart/issues/1452
